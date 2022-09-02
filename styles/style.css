@@ -152,6 +152,9 @@ img {
   #weatherApp-box {
     max-width: 400px;
   }
+  #weatherApp-background {
+    height: 97.9vh;
+  }
   #searchBtn {
     font-size: 0.95rem;
   }

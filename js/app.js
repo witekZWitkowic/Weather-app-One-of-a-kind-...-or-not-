@@ -39,23 +39,28 @@ let weather = {
         const {speed} = data.wind;
         console.log(name, icon, main, temp, humidity, speed);
         cityName.innerText = `${name}`;
-        temperature.innerText = `Temperature: ${temp.toFixed(0)}`;
+        temperature.innerText = `Temperature: ${temp.toFixed(0)}°C`;
         humid.innerText = `Humidity: ${humidity}%`;
         windSpeed.innerText = `Wind Speed: ${speed.toFixed(1)}km/h`;
-        weatherDescription.innerText = `${main}`;
-        weatherImg.setAttribute('src', `http://openweathermap.org/img/wn/${icon}.png`);
+        weatherImg.setAttribute('src', ``);
         if(main === 'Clouds') {
             document.body.style.backgroundImage = `url('https://storage.needpix.com/rsynced_images/clouds-4258726_1280.jpg')`;
+            weatherDescription.innerText = `You can expect cloudy weather today!`;
         } else if(main === 'Rain') {
             document.body.style.backgroundImage = `url('https://www.chemwatch.net/wp-content/uploads/2021/05/image-4.jpeg')`;
+            weatherDescription.innerText = `You can expect rainy weather today!`;
         } else if(main === 'Clear') {
             document.body.style.backgroundImage = `url('https://wallpaperaccess.com/full/3265126.jpg')`;
+            weatherDescription.innerText = `You can expect clear sky today!`;
         } else if(main === 'Snow') {
             document.body.style.backgroundImage = `url('https://gigigriffis.com/wp-content/uploads/2019/01/32838110158_be4014b6f2_k-1.jpg')`;
+            weatherDescription.innerText = `You can expect snowy weather today!`;
         } else if(main === 'Thunderstorm') {
             document.body.style.backgroundImage = `url('https://globalnews.ca/wp-content/uploads/2022/05/GettyImages-819817820.jpg?quality=85&strip=all')`;
+            weatherDescription.innerText = `You can expect thunderstorm today!`;
         } else if(main === 'Drizzle') {
             document.body.style.backgroundImage = `url('https://cdn.bolnews.com/wp-content/uploads/2022/08/Rain-Karachi.jpg')`;
+            weatherDescription.innerText = `You can expect a drizzle day today!`;
         }
     },
     searchWeather: function () {
