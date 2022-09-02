@@ -1,0 +1,18 @@
+@media only screen and (max-width: 500px) {
+  body {
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #searchBox{
+    width: 250px;
+    &::placeholder{
+      font-size: .95rem;
+    }
+  }
+  #weatherApp-box {
+    max-width: 400px;
+  }
+  #searchBtn {
+    font-size: 0.95rem;
+  }
+}

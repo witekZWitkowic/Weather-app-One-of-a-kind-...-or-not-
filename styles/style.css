@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+  color: #FFF;
+}
+
+body {
+  height: 100%;
+  background-image: url("https://static01.nyt.com/images/2014/12/11/technology/personaltech/11machin-illo/11machin-illo-superJumbo-v3.jpg");
+  background-size: cover;
+  transition: 1s ease;
+}
+body::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(101, 101, 101, 0.5);
+}
+
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/*      WeatherApp Boxes    */
+#weatherApp-background {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weatherApp-box {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border-radius: 50px;
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.weatherApp-content {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.beforeInfo {
+  visibility: hidden;
+  max-height: 30px;
+}
+
+/*    Search Items    */
+#searchBox {
+  width: 350px;
+  height: 50px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+#searchBox::placeholder {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.1333333333);
+}
+#searchBox:focus {
+  outline: none;
+}
+#searchBox:focus::placeholder {
+  opacity: 0;
+}
+
+#search-content {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#searchBtn {
+  border-radius: 30px;
+  font-size: 1.2rem;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*       INFORMATION      */
+#cityName {
+  font-weight: bold;
+  font-size: 3.5rem;
+  margin: 20px 0;
+}
+
+#temperature {
+  margin: 20px 0;
+}
+
+#humidity-and-wind {
+  font-size: 1rem;
+  margin: 30px 0;
+}
+
+#weatherDescription {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+#weatherImg {
+  margin-left: 10px;
+}
+
+#weatherImg-box {
+  display: flex;
+  align-items: center;
+}
+
+#weatherDescription-and-img {
+  display: flex;
+}
+
+#weatherApp-tip {
+  visibility: hidden;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+
+.weatherApp-tip-visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: 1s ease;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #searchBox {
+    width: 250px;
+  }
+  #searchBox::placeholder {
+    font-size: 0.95rem;
+  }
+  #weatherApp-box {
+    max-width: 400px;
+  }
+  #searchBtn {
+    font-size: 0.95rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

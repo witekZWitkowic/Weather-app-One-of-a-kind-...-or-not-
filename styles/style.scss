@@ -1,0 +1,129 @@
+@import "./_mixins";
+* {
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+  color: #FFF;
+}
+body {
+  height: 100%;
+  background-image: url('https://static01.nyt.com/images/2014/12/11/technology/personaltech/11machin-illo/11machin-illo-superJumbo-v3.jpg');
+  background-size: cover;
+  transition: 1s ease;
+  &::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(101, 101, 101, 0.5);
+  }
+}
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+/*      WeatherApp Boxes    */
+#weatherApp-background {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#weatherApp-box{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border-radius: 50px;
+  background: #333333CC;
+}
+.weatherApp-content {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+.beforeInfo {
+  visibility: hidden;
+  max-height: 30px;
+}
+
+/*    Search Items    */
+
+#searchBox {
+  width: 350px;
+  height: 50px;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background: #FFFFFF33;
+  &::placeholder {
+    font-size: 1.3rem;
+    color: #FFFFFF22
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus{
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+#search-content {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#searchBtn {
+  border-radius: 30px;
+  font-size: 1.2rem;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background: #FFFFFF33
+}
+
+/*       INFORMATION      */
+#cityName {
+  font-weight: bold;
+  font-size: 3.5rem;
+  @include margin-weatherApp-items;
+}
+#temperature {
+  @include margin-weatherApp-items;
+}
+
+#humidity-and-wind {
+  font-size: 1rem;
+  margin: 30px 0;
+}
+#weatherDescription {
+  @include  margin-weatherApp-items;
+  font-size: 1.2rem;
+}
+#weatherImg {
+  margin-left: 10px;
+}
+#weatherImg-box {
+  display: flex;
+  align-items: center;
+}
+#weatherDescription-and-img {
+  display: flex;
+}
+#weatherApp-tip {
+  visibility: hidden;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+.weatherApp-tip-visible{
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: 1s ease;
+}
+@import "./_media";
